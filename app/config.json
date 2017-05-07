@@ -1,0 +1,13 @@
+{
+	"dbconf":{
+		"driver":"mysql",
+		"dbname":"oizquierdo_story_pub",
+		"dbhost":"localhost",
+		"dbuser":"oizquierdo_oriol",
+		"dbpass":"bardina16"
+	},
+	"app":{
+		"version":"1.0",
+		"title":"XFramework"
+	}
+}
