@@ -22,10 +22,9 @@ class Registry extends Controller{
     }
     
    
-    function registry()
-    {
+    function registry()  {
         $user=filter_input(INPUT_POST, 'user');
-        $pass=filter_input(INPUT_POST, 'pass');
+        $pass=md5(filter_input(INPUT_POST, 'pass'));
         $email=filter_input(INPUT_POST, 'email');
        
         
@@ -33,38 +32,31 @@ class Registry extends Controller{
         $data+=$this->model->check_email($email);
         $data+=$this->model->check_user($user);
         
-        if(empty($data))
-        {
-            $this->model->insert_user($user,$pass,$email,$altitud,$latitud);
+        if(empty($data)) {
+            $this->model->insert_user($user,$pass,$email);
             echo 1;
         }   
-        else
-        {
+        else {
             echo "Error de registro :( ";
         }
     }
     
     
-    function check_email()
-    {
+    function check_email()  {
         $email1=filter_input(INPUT_POST, 'email');
         $data=$this->model->check_email($email1);
         
-        if(!empty($data))
-        {
-            die("Email en uso");
-        }
-        
+        if(!empty($data)) {
+            die("Email en uso :(");
+        }        
     }
     
-    function check_user()
-    {
+    function check_user()  {
         $user=filter_input(INPUT_POST, 'user');
         $data=$this->model->check_user($user);
         
-        if(!empty($data))
-        {
-            die("Usuario en uso ! Pruebe Otro");
+        if(!empty($data)) {
+            die("Usuario en uso ! Pruebe con otro");
         }
         
     }

@@ -8,14 +8,13 @@
             event.preventDefault();
             var user = $("#user").val()
             var pass = $.md5($("#pass").val()); // md5 para cifrar SEGURIDAD ANTE TODO !
-
+           // alert(user);
             $.post( "/storypub/login/login",{user:user,pass:pass}, function( data ) {
-                    if(data==1)
-                    {
+               // alert(data);
+                    if(data==1) {
                         window.location.href = "http://oizquierdo.cesnuria.com/storypub/dashboard";
                     }
-                    else
-                    {
+                    else {
                         alert(data);
                     }
 
@@ -51,7 +50,7 @@
                 <input type="text" id="user" name="user" class="form-control" placeholder="Escriba su usuario..." required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="pass" name="pass" class="form-control" placeholder="Escriba su password..." required>
-                <button class="btn btn-lg btn-success btn-block entrar" type="submit">ENTRAR </button>
+                <button class="btn btn-lg btn-block entrar" type="submit">ENTRAR </button>
                 <a href="https://oizquierdo.cesnuria.com/storypub/registry"><button type="button" class="btn btn-lg login-otros">SOY NUEVO</button></a>
                 <a href="#"><button type="button" class="btn btn-lg login-otros perdida">
                 SOY UN DESASTRE, <br> HE PERDIDO LA CONTRASEÑA

@@ -5,15 +5,9 @@ namespace X\App\Controllers;
 use X\Sys\Controller;
 use X\Sys\Session;
 
-/**
- * Description of Users
- *   Pagina que se encarga de mostrar los usuarios de la pagina para que el admin pueda administrarlos 
- */
-
 class Users extends Controller{
     
-    public function __construct($params)
-    {    
+    public function __construct($params)  {    
         parent::__construct($params);
         $this->addData(array(
            'page'=>'login'));
@@ -23,18 +17,15 @@ class Users extends Controller{
 
     
 
-    function home()
-   {
+    function home()  {
       $data['users']=$this->model->get_users();
       $this->addData($data);
-
-            $this->view->__construct($this->dataView,$this->dataTable);
-         $this->view->show();
+      $this->view->__construct($this->dataView,$this->dataTable);
+      $this->view->show();
    }
 
   
-   function roles()
-   {
+   function roles()  {
       $rol= $this->params['rol'];
       $id= $this->params['id'];
       $this->model->set_rol($id, $rol); 
@@ -42,9 +33,8 @@ class Users extends Controller{
 
   
 
-   function delete()
-   {
+   function delete()  {
       $id= $this->params['id'];
       $this->model->delete_user($id); 
    }
-}
+} // fin de users

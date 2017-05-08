@@ -1,5 +1,4 @@
 <?php 
-
 if(!empty($_SESSION['rol']))
 {
     $rol = $_SESSION['rol'];
@@ -12,20 +11,69 @@ else
 include 'header.php';
 ?>
 
-<script type="text/javascript">
-  
+<script type="text/javascript">  
   $(function(){
-
     $(".deltag").on("click", function(){
-
       tag = $(this).find('span').text();
       $.post("/storypub/storyview/deletetag/tag/"+tag);
       location.reload(true);
     });
-
   });
-
 </script>
+
+<style>
+    
+        #form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+    
+
+    .vista{
+    width: 60%;
+    justify-content: center; 
+    margin-left: 20%; 
+    margin-top: 3%; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+}    
+    
+    
+    
+</style>
+
 <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -64,7 +112,7 @@ include 'header.php';
       </div>
 </nav>
 
-<div id="container-fluid" style="width: 60%;justify-content: center; margin-left: 20%; margin-top: 3%; background-color: white; padding: 20px; border-radius: 10px; ">
+<div id="container-fluid" class="vista">
     <div style="flex:1 1 100%;">
     <div style="font-size: 50px";>
      <?php
@@ -79,43 +127,30 @@ include 'header.php';
     </div>
     <div style="flex:1 1 100%;justify-content: center; padding-top: 30px;">
     <?php
-       include (DATA.$this->dataTable['user'][0]['username'].DS.$this->dataTable['story'][0]['path'].'.txt');
+       include (DATA.$this->dataTable['users'][0]['username'].DS.$this->dataTable['story'][0]['path'].'.txt');
     ?>
     </div>
-    <?php
-       if(empty($this->dataTable['assess']))
-        {
-    ?>
+   
     <div id="vloraciones">
       <div id="numeros" style="font-size: 50px; display: flex;">
       <div>Valoracion:</div>
-        <div style="padding-left: 15px;" class="numero"><a href="/storypub/storyview/assess/story/<?=$this->dataTable['story'][0]['idstories']?>/user/<?=$id?>/val/1">1</a></div>
-        <div style="padding-left: 15px;" class="numero"><a href="/storypub/storyview/assess/story/<?=$this->dataTable['story'][0]['idstories']?>/user/<?=$id?>/val/2">2</a></div>
-        <div style="padding-left: 15px;" class="numero"><a href="/storypub/storyview/assess/story/<?=$this->dataTable['story'][0]['idstories']?>/user/<?=$id?>/val/3">3</a></div>
-        <div style="padding-left: 15px;" class="numero"><a href="/storypub/storyview/assess/story/<?=$this->dataTable['story'][0]['idstories']?>/user/<?=$id?>/val/4">4</a></div>
-        <div style="padding-left: 15px;" class="numero"><a href="/storypub/storyview/assess/story/<?=$this->dataTable['story'][0]['idstories']?>/user/<?=$id?>/val/5">5</a></div>
+        <form>
+              <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5">
+                <label for="radio1">★</label>
+                <input id="radio2" type="radio" name="estrellas" value="4">
+                <label for="radio2">★</label>
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label for="radio3">★</label>
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label for="radio4">★</label>
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label for="radio5">★</label>
+              </p>
+            </form>
       </div>
     </div>
-  <?php
-       }
-       else
-      {
-    ?>
-    <div id="vloraciones" style="font-size: 40px;">
-        <div>Tu valoracion fue de: <?=$this->dataTable['assess'][0]['value'];?></div>
-    </div>
-    <?php
-       }
-    ?>
-    <div id="tags" style="font-size: 30px;">
-    <h3>Tags:</h3>
-        <?php
-          foreach ($this->dataTable['tags'] as $tag) 
-          {
-        ?>
-            <div><?=$tag['nom']?>    <?php if($rol==1) echo "<span class='deltag' style='cursor: pointer;color: blue;'>eliminar<span style='display:none;'>".$tag['idtags']."</span></span>"; ?></div>
-        <?php
-          }
-        ?>
-    </div>
+  
+    
+    
 </div>

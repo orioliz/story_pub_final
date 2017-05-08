@@ -13,16 +13,13 @@ use Api\Lib\Response;
 class UserModel {
     private $db;
     private $response;
-    public function __construct() 
-    {
+    public function __construct() {
         $this->db=DB::start();
         $this->response=new Response();
     }
     
-    public function getAll()
-    {
-        try
-        {
+    public function getAll()  {
+        try  {
             $stmt=$this->db->prepare("SELECT * FROM users");
             $stmt->execute();
             $this->response->setResponse(true);
@@ -30,10 +27,9 @@ class UserModel {
             
             return $this->response;
         }
-        catch (Exception $ex)
-        {
+        catch (Exception $ex)   {
             $this->response->setResponse(true,$ex->getMessage());
             return $this->response;
         }
-    }
+    } //fin getAll
 }

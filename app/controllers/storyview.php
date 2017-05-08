@@ -8,33 +8,21 @@ use X\Sys\Session;
 
 class Storyview extends Controller{
     
-    public function __construct($params)
-    {       
+    public function __construct($params) {       
         parent::__construct($params);
-        $this->addData(array(
-           'page'=>'login'));
+        $this->addData(array('page'=>'login'));
         $this->model=new \X\App\Models\mStoryview();
         $this->view =new \X\App\Views\vStoryview($this->dataView,$this->dataTable);    
-
     }
 
-    /**
-    *
-    * home: funcion que se carga al entrar al Storyview.
-    *
-    */
+   
 
-    function home()
-    {   
+    function home() {   
         $this->view->show();
     }
 
-    /**    
-    * load: funcion donde recogemos los datos de la historia    
-    */
-
-    function load()
-    {
+    
+    function load()  {
        $id= $this->params['id'];
        $data['story']=$this->model->get_story($id); 
        $data['user']=$this->model->get_user($data['story'][0]['users']); 
@@ -43,8 +31,8 @@ class Storyview extends Controller{
 
 
        $this->addData($data);
-            $this->view->__construct($this->dataView,$this->dataTable);
-        $this->view->show();
+       $this->view->__construct($this->dataView,$this->dataTable);
+       $this->view->show();
     }
 
    function assess()
@@ -59,10 +47,5 @@ class Storyview extends Controller{
     }
 
 
-    function deletetag()
-    {
-        $tag= $this->params['tag'];
-        $this->model->del_tag($tag);
-
-    }
+    
 }

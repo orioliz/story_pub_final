@@ -14,8 +14,7 @@ class Response {
     public $response;
     public $message;
     
-    function setResponse($response, $message)
-    {
+    function setResponse($response, $message)  {
         $this->response=$response;
         $this->$message=$message;
     }

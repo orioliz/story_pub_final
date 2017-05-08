@@ -13,4 +13,4 @@
 	define('CSS',APP_W.'pub'.DS.'css'.DS);
 	define('JS',APP_W.'pub'.DS.'js'.DS);
 	define('IMAGE',APP_W.'pub'.DS.'images'.DS);
-	define('DATA',ROOT.'fs'.DS);
+	define('DATA',ROOT.'histories'.DS);

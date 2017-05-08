@@ -16,14 +16,29 @@ Class mLogin extends Model {
 
         public function get_user($user,$pass)
         {
-            $sql='select * from users where username="'.$user.'" AND password="'.$pass.'"';
+           
+            
+            $sql='select * from users where username=:user and password=:pass ';
+            
+            
             $this->query($sql);
-            $this->execute();
+            $this->bind(':user',$user); 
+            $this->bind(':pass',$pass);
+            
+            //$this->execute();
+            
             $res=$this->execute();
-            $result="";
-            if($res){
-                $result=$this->resultset();
+            $r=$this->rowCount();
+            $user=$this->single();
+            
+           // var_dump($r);
+          //  die;
+            
+            //$result="";
+            if($r==1){
+                $result=$user;
             }
-            return $result;
+            return $result; 
+         
         }
 }            

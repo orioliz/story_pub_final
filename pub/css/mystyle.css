@@ -166,12 +166,16 @@ button span {
 .entrar {
    background: #fa4900;
    border: 2px solid #500202;
+   color: #fff;
 }
-.entrar:hover {
+.entrar:hover, .entrar:focus, .entrar:active {
     background: #a33103;
     border-color: #500202;
     color: white;
 }
+
+
+
 
 .perdida {
     font-size: 9px
@@ -183,4 +187,24 @@ button span {
 .login-otros:hover {
     background: #500202;
     color: #ffffff;
+}
+
+
+
+/* pagin */
+
+
+.pagination>li>a, .pagination>li>span {   
+    color: #e2e2e2;
+    background-color: #f07745;
+}
+
+.punt {
+    font-size: 16px
+}
+
+
+
+.views{
+    width: 60%;justify-content: center; margin-left: 20%; margin-top: 3%; background-color: white; padding: 20px; border-radius: 10px;
 }

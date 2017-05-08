@@ -51,47 +51,47 @@ include 'header.php';
       </div>
 </nav>
 
-<div id="container-fluid" style="width: 60%;justify-content: center; margin-left: 20%; margin-top: 3%; background-color: white; padding: 20px; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between;">
-<h2 style="width: 100%;">Perfil</h2>
-    <div style="font-size: 20px;">
-      <div><strong>Nombre: </strong><?=$this->dataTable['user'][0]['username'];?></div>
-      <div><strong>Email: </strong><?=$this->dataTable['user'][0]['email'];?></div>
-      <div><strong>Rol: </strong><?php if($this->dataTable['user'][0]['rols']==1){echo 'Administrador';} else{ echo 'Usuario';};?></div>
-    </div>
-    <div id="map" style="width:50%;height:200px"></div>
-    <script type="text/javascript">
-      function myMap() {
-        var myCenter = new google.maps.LatLng(<?=$this->dataTable['user'][0]['altitud'];?>,<?=$this->dataTable['user'][0]['latitud'];?>);
-        var mapCanvas = document.getElementById("map");
-        var mapOptions = {center: myCenter, zoom: 8};
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        var marker = new google.maps.Marker({position:myCenter,title:'Flipendo!'});
-        marker.setMap(map);
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1CS5qnLXMBlT8cvzsWPE7IaN5r5TT-tY&callback=myMap"></script>
-    <h2 style="width: 100%;">Historias</h2>
-    <div style="width: 100%;">
-    <?php
-      foreach ($this->dataTable['stories'] as $story)
-      {
-        ?>
-        <div class="historia">
-                <a class="datos" href="/storypub/storyview/load/id/<?=$story['idstories']?>">
-                <div class="media"><?=$story['medium_value']?></div>
-                <div class="h_cont"><p><strong><?=$story['title']?></strong></p><?=$story['sinopsis']?></div>
-                </a>
-                <div class="acciones">
-                  <a href="/storypub/editstory/load/id/<?=$story['idstories']?>">
-                  <div>Editar</div>
-                  </a>
-                  <a href="/storypub/dashboard/delete/id/<?=$story['idstories']?>">
-                  <div>Borrar</div>
-                  </a> 
-                </div>
-              </div>
+<div id="container-fluid" class="paneluser" style="  width: 60%;
+    justify-content: center; 
+    margin-left: 20%; 
+    margin-top: 3%; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;">
+    
+    <h2 style="width: 100%;">Perfil</h2>
+        <div style="font-size: 20px;">
+          <div><strong>Nombre: </strong><?=$this->dataTable['user'][0]['username'];?></div>
+          <div><strong>Email: </strong><?=$this->dataTable['user'][0]['email'];?></div>
+          <div><strong>Rol: </strong><?php if($this->dataTable['user'][0]['roles']==1){echo 'Administrador';} else{ echo 'Usuario';};?></div>
+        </div>    
+
+        <h2 style="width: 100%;">Mis Historias</h2>
+
+        <div style="width: 100%;">
         <?php
-      }
-    ?>
-    </div>
+          foreach ($this->dataTable['stories'] as $story)
+          {
+            ?>
+            <div class="historia">
+                    <a class="datos" href="/storypub/storyview/load/id/<?=$story['idstories']?>">
+                    <div class="media"><?=$story['medium_value']?></div>
+                    <div class="h_cont"><p><strong><?=$story['title']?></strong></p><?=$story['sinopsis']?></div>
+                    </a>
+                    <div class="acciones">
+                      <a href="/storypub/editstory/load/id/<?=$story['idstories']?>">
+                      <div>Editar</div>
+                      </a>
+                      <a href="/storypub/dashboard/delete/id/<?=$story['idstories']?>">
+                      <div>Borrar</div>
+                      </a> 
+                    </div>
+                  </div>
+            <?php
+          }
+        ?>
+        </div>
 </div>
