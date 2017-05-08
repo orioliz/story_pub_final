@@ -41,7 +41,7 @@ class Dashboard extends Controller{
     function logout(){
         
         Session::destroy();
-        header('Location: https://localhost/storypub/');
+        header('Location: https://oizquierdo.cesnuria.com/storypub/');
     } 
 
     /**
@@ -53,7 +53,7 @@ class Dashboard extends Controller{
     function delete(){
         $id= $this->params['id'];
         $this->model->del_story($id); 
-        header('Location: https://localhost/storypub/dashboard');
+        header('Location: https://oizquierdo.cesnuria.com/storypub/dashboard');
     } 
 }
 

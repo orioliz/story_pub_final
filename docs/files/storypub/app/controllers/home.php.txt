@@ -6,7 +6,7 @@
  * Description of home
  *  Pagina principal de la aplicacion donde podemos seleccionar como accedemos a la aplicacion.
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 
 	class Home extends Controller{

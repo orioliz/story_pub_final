@@ -9,7 +9,7 @@ use X\Sys\Session;
  * Description of Editstory
  *  Pagina donde podremos modificar el contenido de las historias
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 
 class Editstory extends Controller{

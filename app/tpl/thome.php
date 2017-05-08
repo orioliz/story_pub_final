@@ -21,15 +21,15 @@
       <div class="jumbotron1">
           <img src="/storypub/pub/images/logo_Storypng.png" alt="" width="340px">
           <div class="buttons"> 
-              <a href="https://localhost/storypub/login">                 
+              <a href="https://oizquierdo.cesnuria.com/storypub/login">                 
                   <button type="button" class="btn btn-lg btn-default">
                   <span class="glyphicon glyphicon-log-in"></span>Entrar</button>
               </a>   
-              <a href="https://localhost/storypub/registry">
+              <a href="https://oizquierdo.cesnuria.com/storypub/registry">
                   <button type="button" class="btn btn-lg btn-default">
                   <span class="glyphicon glyphicon-user"></span>Nuevo usuario</button>
               </a>
-              <a href="https://localhost/storypub/dashboard">
+              <a href="https://oizquierdo.cesnuria.com/storypub/dashboard">
                  <button type="button" class="btn btn-lg btn-default">
                  <span class="glyphicon glyphicon-book"></span>Historias</button>
              </a>

@@ -8,7 +8,7 @@ use X\Sys\Session;
  * Description of dashboard
  *  Menu principal de la aplicacion donde despues de pasar la identificacion dependiendo de nuetro nivel de usuario podremos acceder a diferentes acciones.
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 class Dashboard extends Controller{
     

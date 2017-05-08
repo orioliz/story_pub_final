@@ -9,7 +9,7 @@ use X\Sys\Session;
  * Description of Users
  *   Pagina que se encarga de mostrar los usuarios de la pagina para que el admin pueda administrarlos
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 
 class Users extends Controller{

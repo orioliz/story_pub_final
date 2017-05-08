@@ -5,7 +5,7 @@
 $config['displayErrorDetails']=true;
 $config['addContenLengthHeader']=false;
 //Config PDO
-$config['db']['host']='localhost';
+$config['db']['host']='oizquierdo.cesnuria.com';
 $config['db']['user']='root';
 $config['db']['pass']='linuxlinux';
 $config['db']['dbname']='storypub';

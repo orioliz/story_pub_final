@@ -4,7 +4,7 @@
 	/**
 	*
 	*
-	*@author Aitor 
+	*@author Oriol_Izquierdo 
 	*
 	* Request, Traduce la URL a controlador, accion y parametros
 	*

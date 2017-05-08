@@ -33,7 +33,7 @@ getLocation();
                 $.post( "/storypub/registry/registry",{email:email,user:user,pass:pass,latitud:latitud,altitud:altitud}, function( data ) {
                     if(data==1)
                     {
-                        window.location.href = "https://localhost/storypub/login";
+                        window.location.href = "https://oizquierdo.cesnuria.com/storypub/login";
                     }
                     else
                     {
@@ -95,8 +95,8 @@ function getLocation() {
         
         <button id="enviar" class="btn btn-lg btn-success btn-block entrar" type="submit">Enviar</button>
        </form>
-        <a href="https://localhost/storypub/login"><button type="button" class="btn btn-lg login-otros">Login</button></a>
-          <a href="https://localhost/storypub/dashboard"><button type="button" class="btn btn-lg login-otros">Guest</button></a>
+        <a href="https://oizquierdo.cesnuria.com/storypub/login"><button type="button" class="btn btn-lg login-otros">Login</button></a>
+          <a href="https://oizquierdo.cesnuria.com/storypub/dashboard"><button type="button" class="btn btn-lg login-otros">Guest</button></a>
         </div>
     </div> 
   </body>

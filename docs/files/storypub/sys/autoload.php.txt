@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* @author Aitor
+* @author Oriol_Izquierdo
 * Autoload, clase que necesitamos para que funcionen los namespaces.
 *
 *

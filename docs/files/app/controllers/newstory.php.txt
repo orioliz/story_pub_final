@@ -9,7 +9,7 @@ use X\Sys\Session;
  * Description of newstory
  *  Pagina donde podremos crear una nueva historia
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 
 class Newstory extends Controller{

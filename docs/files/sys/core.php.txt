@@ -3,7 +3,7 @@
 	namespace X\Sys;
 	/**
 	*
-	*@author: Aitor 
+	*@author: Oriol_Izquierdo 
 	*
 	* Core, clase que recoge la ruta y la separa por controlador, accion y parametros, gracias a la classe request.
 	* Y rutea automaticamente hacia ese controlador.

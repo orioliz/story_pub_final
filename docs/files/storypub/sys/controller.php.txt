@@ -4,7 +4,7 @@
 	use \X\Sys\Registry;
 	/**
 	*
-	* @author Aitor
+	* @author Oriol_Izquierdo
 	* Controller, controlado base del sistema MVC.
 	*	
 	*

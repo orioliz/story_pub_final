@@ -7,7 +7,7 @@ use X\Sys\Controller;
  * Description of login
  *  Pagina donde los usuarios se podran logear para acceder al dashboard.
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 class login extends Controller{
     

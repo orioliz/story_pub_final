@@ -8,7 +8,7 @@ use X\Sys\Controller;
  * Description of Registry
  *  Pagina donde los usuarios pueden registrarse.
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 class Registry extends Controller{
     

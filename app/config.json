@@ -2,7 +2,7 @@
 	"dbconf":{
 		"driver":"mysql",
 		"dbname":"oizquierdo_story_pub",
-		"dbhost":"localhost",
+		"dbhost":"oizquierdo.cesnuria.com",
 		"dbuser":"oizquierdo_oriol",
 		"dbpass":"bardina16"
 	},

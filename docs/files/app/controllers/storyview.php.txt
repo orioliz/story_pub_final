@@ -9,7 +9,7 @@ use X\Sys\Session;
  * Description of Storyview
  *  PAgina donde podremos visualizar la hisotria, valorarla y ver sus tags.
  *
- * @author aitor
+ * @author Oriol_Izquierdo
  */
 
 class Storyview extends Controller{

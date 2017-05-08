@@ -14,7 +14,7 @@ namespace Api\Lib;
 class DB {
     public static function start()
     {
-        $pdo=new PDO('mysql:host=localhost;dbname=storypub','root','linuxlinux');
+        $pdo=new PDO('mysql:host=oizquierdo.cesnuria.com;dbname=storypub','root','linuxlinux');
         return $pdo;
     }
 }

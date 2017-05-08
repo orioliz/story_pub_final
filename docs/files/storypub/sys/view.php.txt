@@ -4,7 +4,7 @@
 
 	/**
 	*
-	*@author Aitor
+	*@author Oriol_Izquierdo
 	*
 	* View, clase padre para las vistas
 	*

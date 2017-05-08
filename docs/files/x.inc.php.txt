@@ -2,7 +2,7 @@
 	
 	/**
 	*
-	* @author: Aitor
+	* @author: Oriol_Izquierdo
 	* X.inc, fichero donde incluimos el autoload y creamos palabras clave.
 	*
 	**/
