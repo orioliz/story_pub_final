@@ -85,7 +85,10 @@ include 'header.php';
             ?>
               <div class="historia">
                 <a class="datos" href="/storypub/storyview/load/id/<?=$historia['idstories']?>">
-                <div class="media"><?=$historia['medium_value']?></div>
+                <div class="media">
+                <span class="punt">Puntuacion</span>
+                <?=$historia['medium_value']?>
+                </div>
                 <div class="h_cont"><p><strong><?=$historia['title']?></strong></p><?=$historia['sinopsis']?></div>
                 </a>
                 <?php
@@ -117,7 +120,10 @@ include 'header.php';
             ?>
               <div class="historia">
                 <a class="datos" href="/storypub/storyview/load/id/<?=$historia['idstories']?>">
-                <div class="media"><?=$historia['medium_value']?></div>
+                <div class="media">
+                   <span>Puntuacion</span>
+                    <?=$historia['medium_value']?>
+                </div>
                 <div class="h_cont"><p><strong><?=$historia['title']?></strong></p><?=$historia['sinopsis']?></div>
                 </a>
                 <div class="acciones">
@@ -143,6 +149,17 @@ include 'header.php';
           }
           ?> 
         </dir>
+      </div>
+      <div class="nums">
+          <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Primera</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Ultima</a></li>
+              </ul>
+         </nav>
       </div>
     </div>
   </div>
