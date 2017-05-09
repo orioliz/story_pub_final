@@ -6,7 +6,7 @@ if(!empty($_SESSION['rol']))
 }
 else
 {
-    header('Location: /sotrypub/dashboard');
+    header('Location: /storypub/dashboard');
 }
 include 'header.php';
 ?>
